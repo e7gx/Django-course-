@@ -5,4 +5,4 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse('hi abdullah')
+    return HttpResponse('hi abdullah you can know switch between pages')
