@@ -15,7 +15,7 @@ def pagesByNumbers(request, page):
     pages = list(pages_challenges.keys())
 
     if page > len(pages):
-        return HttpResponseNotFound("Error not sported abdullah")
+        return HttpResponseNotFound("<h1>Error not supported by abdullah!</h2>")
 
     redirect_page = pages[page - 1]
     redirect_path = reverse("abdullah-test",args=[redirect_page])
@@ -25,6 +25,7 @@ def pagesByNumbers(request, page):
 def page(request, page):
     try:
         pages_user = pages_challenges[page]
-        return HttpResponse(pages_user)
+        data_display = f"<h1><br>{pages_user}</h2>"
+        return HttpResponse(data_display)
     except:
-        return HttpResponseNotFound("Error not sported abdullah")
+        return HttpResponseNotFound("<h1>Error not supported by abdullah!</h2>")
