@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
-
+from django.urls import reverse
 # Create your views here.
 pages_challenges = {
 
@@ -18,7 +18,8 @@ def pagesByNumbers(request, page):
         return HttpResponseNotFound("Error not sported abdullah")
 
     redirect_page = pages[page - 1]
-    return HttpResponseRedirect("/challenges/" + redirect_page)
+    redirect_path = reverse("abdullah-test",args=[redirect_page])
+    return HttpResponseRedirect(redirect_path)
 
 
 def page(request, page):
