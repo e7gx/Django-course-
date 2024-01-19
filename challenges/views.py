@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+
+
 # Create your views here.
 pages_challenges = {
 
@@ -18,7 +20,8 @@ def index(request):
     for page in pages:
         capitalized_page = page.capitalize()
         page_path = reverse("abdullah-test", args=[page])
-        list_items += f"<li><a href=\"{page_path}\">{capitalized_page}</a></li>"
+        list_items += f"<li><a href=\"{
+            page_path}\">{capitalized_page}</a></li>"
 
     response_data = f"<ul>{list_items}</ul>"
     return HttpResponse(response_data)
@@ -38,7 +41,7 @@ def pagesByNumbers(request, page):
 def page(request, page):
     try:
         pages_user = pages_challenges[page]
-        data_display = f"<h1><br>{pages_user}</h2>"
-        return HttpResponse(data_display)
+        return render(request,"challenges/challenge.html")
+        
     except:
         return HttpResponseNotFound("<h1>Error not supported by abdullah!</h2>")
