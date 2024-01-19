@@ -14,17 +14,11 @@ pages_challenges = {
 
 
 def index(request):
-    list_items = ""
     pages = list(pages_challenges.keys())
 
-    for page in pages:
-        capitalized_page = page.capitalize()
-        page_path = reverse("abdullah-test", args=[page])
-        list_items += f"<li><a href=\"{
-            page_path}\">{capitalized_page}</a></li>"
-
-    response_data = f"<ul>{list_items}</ul>"
-    return HttpResponse(response_data)
+    return render(request,"challenges/index.html",{
+        "pages": pages
+    })
 
 
 def pagesByNumbers(request, page):
