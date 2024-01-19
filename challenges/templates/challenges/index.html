@@ -1,15 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All Challenges</title>
-  </head>
-  <body>
-    <ul>
-      {% for page in pages %}
-      <li><a href="{% url "abdullah-test" page %}">{{ page|title }}</a></li>
-      {% endfor %}
-    </ul>
-  </body>
-</html>
+{% extends "base.html" %}
+
+{%block page_title%}
+الصفحة الرئيسية
+ {%endblock %}
+
+ {%block content%}
+ 
+<ul>
+  {% for page in pages %}
+  <li><a href=" {% url "abdullah-test" page %} ">{{ page|title }}</a></li>
+  {% endfor %}
+</ul>
+{%endblock %}

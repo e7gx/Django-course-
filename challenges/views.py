@@ -8,7 +8,7 @@ pages_challenges = {
 
     "abdullah": "my first name",
     "ibrahim": "my second name",
-    "mo": "my theard name",
+    "mo":None,
     "gh": "my last name"
 }
 
