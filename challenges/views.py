@@ -41,7 +41,13 @@ def pagesByNumbers(request, page):
 def page(request, page):
     try:
         pages_user = pages_challenges[page]
-        return render(request,"challenges/challenge.html")
+        pages_title = pages_challenges[page]
         
+        return render(request, "challenges/challenge.html", {
+            "text": pages_user,
+            "title": pages_title,
+            "name": page.capitalize(),
+        })
+
     except:
         return HttpResponseNotFound("<h1>Error not supported by abdullah!</h2>")
