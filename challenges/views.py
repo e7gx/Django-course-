@@ -38,7 +38,7 @@ def page(request, page):
         pages_title = pages_challenges[page]
         
         return render(request, "challenges/challenge.html", {
-            "text": pages_user,
+            "page_name": pages_user,
             "title": pages_title,
             "name": page.capitalize(),
         })

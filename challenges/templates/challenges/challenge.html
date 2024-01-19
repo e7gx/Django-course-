@@ -1,10 +1,14 @@
-{% extends "base.html" %} {%block page_title%} الصفحة الفرعية {%endblock%}
+{% extends "base.html" %}
+
+{%block page_title%} 
+{{page_name| title}} Challenge 
+{%endblock%}
 
 
 {%block content%}
 <div>
-  <h1>{{ text | title }} Challenge</h1>
-  {% if text is not None %}
+  <h1>{{ page_name | title }} Challenge</h1>
+  {% if page_name is not None %}
   <h2>{{ name|title }}</h2>
   {% else %}
   <p>بيانات خاصة</p>
