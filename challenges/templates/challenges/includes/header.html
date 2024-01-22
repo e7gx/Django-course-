@@ -1,5 +1,8 @@
 <header>
   <nav>
-    <a href="{{% pages %}}">All Challenges </a>
+    <a href="{% url "index" %}">All Challenges </a>
+
   </nav>
+  {{ page_name|title }}
+
 </header>

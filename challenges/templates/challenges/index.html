@@ -5,7 +5,8 @@
  {%endblock %}
 
  {%block content%}
- 
+ {% include "challenges/includes/header.html" %}
+
 <ul>
   {% for page in pages %}
   <li><a href=" {% url "abdullah-test" page %} ">{{ page|title }}</a></li>
