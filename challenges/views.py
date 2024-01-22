@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
 
 
@@ -44,4 +44,5 @@ def page(request, page):
         })
 
     except:
-        return HttpResponseNotFound("<h1>Error not supported by abdullah!</h2>")
+        raise Http404()
+
