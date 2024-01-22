@@ -5,18 +5,17 @@ from django.urls import reverse
 
 # Create your views here.
 pages_challenges = {
-
-    "abdullah": "my first name",
-    "ibrahim": "my second name",
-    "mo":None,
-    "gh": "my last name"
+    "my first name": "abdullah",
+    " my second name": "ibrahim",
+    "my theard name": None,
+    "my last name ": "gh"
 }
 
 
 def index(request):
     pages = list(pages_challenges.keys())
 
-    return render(request,"challenges/index.html",{
+    return render(request, "challenges/index.html", {
         "pages": pages
     })
 
@@ -36,7 +35,7 @@ def page(request, page):
     try:
         pages_user = pages_challenges[page]
         pages_title = pages_challenges[page]
-        
+
         return render(request, "challenges/challenge.html", {
             "page_name": pages_user,
             "title": pages_title,
@@ -45,4 +44,3 @@ def page(request, page):
 
     except:
         raise Http404()
-
