@@ -5,10 +5,11 @@ from django.urls import reverse
 
 # Create your views here.
 pages_challenges = {
-    "my first name": "abdullah",
-    " my second name": "ibrahim",
-    "my theard name": None,
-    "my last name ": "gh"
+
+    "abdullah": "my first name",
+    "ibrahim": "my second name",
+    "mo": None,
+    "gh": "my last name"
 }
 
 
