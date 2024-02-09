@@ -10,14 +10,7 @@ pages_challenges = {
     "ibrahim": "my second name",
     "mo": None,
     "gh": "my last name",
-    "abdullah": "my first name",
-    "ibrahim": "my second name",
-    "mo": None,
-    "gh": "my last name",
-    "abdullah": "my first name",
-    "ibrahim": "my second name",
-    "mo": None,
-    "gh": "my last name"
+
 }
 
 
